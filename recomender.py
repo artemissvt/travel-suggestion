@@ -1,16 +1,7 @@
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler
-
-# =========================
-# LOAD CLUSTERED DATASET
-# =========================
 
 df = pd.read_csv("clustered_travel_dataset.csv")
-
-# =========================
-# FEATURES USED FOR MATCHING USER → CLUSTER
-# =========================
 
 FEATURES = [
     "Spring",
@@ -25,117 +16,66 @@ FEATURES = [
     "Capital"
 ]
 
-# =========================
-# USER INPUT PARSER
-# =========================
-
+# IMPORTANT: use SAME preprocessing style as clustering
 def parse_user_input(text):
     text = text.lower()
 
-    prefs = {
-        "Spring": 0,
-        "Summer": 0,
-        "Autumn": 0,
-        "Winter": 0,
-        "Historic": 0,
-        "Medieval": 0,
-        "Beach": 0,
-        "Architecture": 0,
-        "Capital": 0,
-        "Cost_of_Living_Encoded": 1,
-    }
+    prefs = dict.fromkeys(FEATURES, 0)
+    prefs["Cost_of_Living_Encoded"] = 1
 
-    if "spring" in text:
-        prefs["Spring"] = 1
-    if "summer" in text:
-        prefs["Summer"] = 1
-    if "autumn" in text or "fall" in text:
-        prefs["Autumn"] = 1
-    if "winter" in text:
-        prefs["Winter"] = 1
+    if "spring" in text: prefs["Spring"] = 1
+    if "summer" in text: prefs["Summer"] = 1
+    if "autumn" in text or "fall" in text: prefs["Autumn"] = 1
+    if "winter" in text: prefs["Winter"] = 1
 
-    if "historic" in text:
-        prefs["Historic"] = 1
-    if "medieval" in text:
-        prefs["Medieval"] = 1
-    if "beach" in text or "island" in text:
-        prefs["Beach"] = 1
-    if "architecture" in text:
-        prefs["Architecture"] = 1
+    if "historic" in text: prefs["Historic"] = 1
+    if "medieval" in text: prefs["Medieval"] = 1
+    if "beach" in text or "island" in text: prefs["Beach"] = 1
+    if "architecture" in text: prefs["Architecture"] = 1
 
-    if "cheap" in text or "budget" in text:
-        prefs["Cost_of_Living_Encoded"] = 0
-    elif "expensive" in text or "luxury" in text:
-        prefs["Cost_of_Living_Encoded"] = 3
+    if "cheap" in text: prefs["Cost_of_Living_Encoded"] = 0
+    if "luxury" in text: prefs["Cost_of_Living_Encoded"] = 3
 
     return prefs
 
 
-# =========================
-# FIND BEST CLUSTER
-# =========================
-
-def find_best_cluster(user_vector):
-    """
-    Instead of training a new model,
-    we match user to clusters by similarity.
-    """
-
-    cluster_scores = {}
-
-    for cluster_id in df["Cluster"].unique():
-        cluster_data = df[df["Cluster"] == cluster_id]
-
-        cluster_center = cluster_data[FEATURES].mean().values
-
-        distance = np.sqrt(np.sum((user_vector - cluster_center) ** 2))
-
-        cluster_scores[cluster_id] = distance
-
-    # smallest distance = best cluster
-    best_cluster = min(cluster_scores, key=cluster_scores.get)
-
-    return best_cluster
-
-
-# =========================
-# RECOMMEND INSIDE CLUSTER
-# =========================
-
 def recommend(user_text, top_n=5):
 
     prefs = parse_user_input(user_text)
-
     user_vector = np.array([prefs[f] for f in FEATURES])
 
     # STEP 1: find best cluster
-    cluster = find_best_cluster(user_vector)
+    cluster_scores = {}
 
-    print(f"\n🔍 Matched Cluster: {cluster}")
+    for c in df["Cluster"].unique():
+        cluster_data = df[df["Cluster"] == c]
+        cluster_center = cluster_data[FEATURES].mean().values
 
-    # STEP 2: filter dataset to that cluster
-    cluster_df = df[df["Cluster"] == cluster].copy()
+        dist = np.linalg.norm(user_vector - cluster_center)
+        cluster_scores[c] = dist
 
-    # STEP 3: compute simple similarity inside cluster
-    distances = []
+    best_cluster = min(cluster_scores, key=cluster_scores.get)
 
-    for _, row in cluster_df.iterrows():
-        v = row[FEATURES].values.astype(float)
+    print(f"\nMatched Cluster: {best_cluster}")
 
-        dist = np.sqrt(np.sum((user_vector - v) ** 2))
-        distances.append(dist)
+    # STEP 2: filter cluster
+    cluster_df = df[df["Cluster"] == best_cluster]
 
-    cluster_df["Score"] = distances
+    # STEP 3: rank inside cluster
+    scores = np.linalg.norm(
+        cluster_df[FEATURES].values - user_vector,
+        axis=1
+    )
 
-    results = cluster_df.sort_values("Score").head(top_n)
+    cluster_df = cluster_df.copy()
+    cluster_df["Score"] = scores
 
-    return results
+    return cluster_df.sort_values("Score").head(top_n)
 
 
-# =========================
-# TERMINAL INTERFACE
-# =========================
+#just for testing
 
+"""
 print("=" * 60)
 print("CLUSTER-BASED TRAVEL RECOMMENDER (ML VERSION)")
 print("=" * 60)
@@ -153,4 +93,5 @@ for i, row in enumerate(results.iterrows(), 1):
     data = row[1]
     print(f"{i}. {data['Destination']} ({data['Country']})")
 
-print("\nDone.")
+print("\nDone.") 
+"""

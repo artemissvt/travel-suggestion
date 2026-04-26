@@ -136,8 +136,10 @@ final_df = df[
 
 final_df.to_csv("cleaned_travel_dataset.csv", index=False)
 
+"""
 print("Dataset cleaned successfully.")
 print()
 print(final_df.head())
 print()
 print("Saved as: cleaned_travel_dataset.csv")
+"""
