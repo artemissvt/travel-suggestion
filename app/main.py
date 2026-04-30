@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
-df = pd.read_csv("european_tour_destinations.csv", encoding="latin1")
+df = pd.read_csv("../european_tour_destinations.csv", encoding="latin1")
 
 # tourists
 def convert_tourists(value):
@@ -136,10 +136,10 @@ final_df = df[
 
 final_df.to_csv("cleaned_travel_dataset.csv", index=False)
 
-"""
+'''
 print("Dataset cleaned successfully.")
 print()
 print(final_df.head())
 print()
 print("Saved as: cleaned_travel_dataset.csv")
-"""
+'''

@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from recomender import recommend
+from app.recommender import recommend
 
 app = FastAPI()
 
@@ -13,7 +13,6 @@ def health():
 
 @app.post("/recommend")
 def get_recommendations(request: UserRequest):
-
     results = recommend(request.text)
 
     return {

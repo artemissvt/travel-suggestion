@@ -4,7 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.impute import SimpleImputer
 import joblib
 
-df = pd.read_csv("cleaned_travel_dataset.csv")
+df = pd.read_csv("../cleaned_travel_dataset.csv")
 
 FEATURES = [
     "Spring","Summer","Autumn","Winter",
