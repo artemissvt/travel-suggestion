@@ -57,7 +57,7 @@ Ribe,Denmark,-0.3310047474747989,1,0,1,0,1.0,0,1,0,1,0,0
 Roskilde,Denmark,-0.3310047474747989,1,0,1,0,1.0,0,0,0,0,0,1
 Helsing?r,Denmark,-0.4703391380117843,1,0,1,0,2.0,0,0,0,0,0,1
 Aalborg,Denmark,-0.6499722921053341,1,0,1,0,1.0,1,0,0,0,0,1
-Aarhus Botanical Garden,Denmark,-1.3359606923085443,1,0,1,0,0.0,0,0,0,0,0,1
+Aarhus Botanical Garden,Denmark,-1.3359606923085443,1,0,1,0,,0,0,0,0,0,1
 Tivoli Gardens,Denmark,0.9674335158923976,1,0,1,0,2.0,0,0,0,0,0,1
 Berlin,Germany,1.7269717388180823,1,0,1,0,2.0,1,0,0,0,1,3
 Munich,Germany,1.5395812436735363,1,0,1,0,2.0,1,0,0,1,0,1
@@ -69,16 +69,16 @@ Heidelberg,Germany,0.5346205532979038,1,0,1,0,2.0,0,0,0,0,0,1
 Rothenburg ob der Tauber,Germany,0.1018077468075683,1,0,1,0,1.0,0,1,0,0,0,0
 Neuschwanstein Castle,Germany,0.3549869829275835,1,0,1,0,2.0,0,0,0,1,0,1
 Black Forest,Germany,1.1067681874164903,1,0,1,0,2.0,0,0,0,0,0,1
-Monaco-Ville,Monaco,0.7877998934873457,1,0,1,0,0.0,1,0,0,0,0,1
-Monte Carlo,Monaco,0.7877998934873457,1,0,1,0,0.0,0,0,0,0,0,1
-Casino Square,Monaco,0.5346205532979038,1,0,1,0,0.0,0,0,0,0,0,1
+Monaco-Ville,Monaco,0.7877998934873457,1,0,1,0,,1,0,0,0,0,1
+Monte Carlo,Monaco,0.7877998934873457,1,0,1,0,,0,0,0,0,0,1
+Casino Square,Monaco,0.5346205532979038,1,0,1,0,,0,0,0,0,0,1
 Oceanographic Museum,Monaco,0.1018077468075683,1,0,1,0,1.0,0,0,0,0,0,1
-Japanese Garden,Monaco,-0.3310047474747989,1,0,1,0,0.0,0,0,0,0,0,1
-Saint-Martin Gardens,Monaco,-0.6499722921053341,1,0,1,0,0.0,0,0,0,0,0,1
-Exotic Garden,Monaco,-0.9031506956730588,1,0,1,0,0.0,0,0,0,0,0,1
-Rainier III Botanical Garden,Monaco,-1.3359606923085443,1,0,1,0,0.0,0,0,0,0,0,1
-Larvotto Beach,Monaco,-1.3359606923085443,0,1,1,0,0.0,0,0,1,0,0,2
-Grimaldi Forum,Monaco,-1.7687675669275766,0,0,0,0,0.0,0,0,0,0,0,2
+Japanese Garden,Monaco,-0.3310047474747989,1,0,1,0,,0,0,0,0,0,1
+Saint-Martin Gardens,Monaco,-0.6499722921053341,1,0,1,0,,0,0,0,0,0,1
+Exotic Garden,Monaco,-0.9031506956730588,1,0,1,0,,0,0,0,0,0,1
+Rainier III Botanical Garden,Monaco,-1.3359606923085443,1,0,1,0,,0,0,0,0,0,1
+Larvotto Beach,Monaco,-1.3359606923085443,0,1,1,0,,0,0,1,0,0,2
+Grimaldi Forum,Monaco,-1.7687675669275766,0,0,0,0,,0,0,0,0,0,2
 Moscow,Russia,1.6789159339301432,1,1,1,0,2.0,0,0,0,0,1,3
 St. Petersburg,Russia,1.4002465565390152,1,1,1,0,2.0,1,0,0,0,0,1
 Sochi,Russia,0.7877998934873457,0,1,0,0,2.0,0,0,1,0,0,2
@@ -88,7 +88,7 @@ Lake Baikal,Russia,0.6739551936011504,0,1,0,0,1.0,0,0,0,0,0,2
 Kamchatka Peninsula,Russia,0.1018077468075683,0,1,0,0,2.0,0,0,0,0,0,2
 Golden Ring,Russia,,1,1,1,0,1.0,1,1,0,1,0,0
 Trans-Siberian Railway,Russia,,0,1,0,0,2.0,0,0,0,0,0,2
-St. Basil's Cathedral,Russia,0.5346205532979038,1,1,1,0,0.0,0,0,0,1,0,1
+St. Basil's Cathedral,Russia,0.5346205532979038,1,1,1,0,,0,0,0,1,0,1
 Athens,Greece,1.5395812436735363,1,0,1,0,2.0,0,0,0,0,1,3
 Santorini,Greece,0.5346205532979038,1,0,1,0,3.0,0,0,0,0,0,1
 Mykonos,Greece,0.5346205532979038,1,0,1,0,3.0,0,0,1,0,0,1
@@ -148,7 +148,7 @@ Bodrum,Turkey,0.1018077468075683,1,0,1,0,2.0,0,0,1,0,0,1
 Fethiye,Turkey,-0.3310047474747989,1,0,1,0,2.0,0,0,1,0,0,1
 Istanbul Grand Bazaar,Turkey,1.5395812436735363,0,0,0,0,2.0,0,0,0,0,0,2
 Topkapi Palace,Turkey,1.1067681874164903,0,0,0,0,2.0,0,0,0,0,0,2
-Blue Mosque,Turkey,0.5346205532979038,0,0,0,0,0.0,0,0,0,1,0,2
+Blue Mosque,Turkey,0.5346205532979038,0,0,0,0,,0,0,0,1,0,2
 Kyiv,Ukraine,0.8840542212067946,1,1,1,0,2.0,1,0,0,1,1,3
 Lviv,Ukraine,0.5346205532979038,1,1,1,0,1.0,1,1,0,1,0,0
 Odessa,Ukraine,0.1018077468075683,1,1,1,0,1.0,0,0,1,0,0,1
@@ -172,7 +172,7 @@ Scottish Highlands,United Kingdom,0.1018077468075683,1,0,1,0,2.0,0,0,0,0,0,1
 Luxembourg City,Luxembourg,0.3549869829275835,1,0,1,0,2.0,0,1,0,0,1,0
 Vianden,Luxembourg,-0.3310047474747989,1,0,1,0,2.0,0,1,0,0,0,0
 Esch-sur-Alzette,Luxembourg,-0.6499722921053341,1,0,1,0,1.0,0,0,0,0,0,1
-Luxembourg American Cemetery and Memorial,Luxembourg,-1.3359606923085443,0,0,0,0,0.0,0,0,0,0,0,2
+Luxembourg American Cemetery and Memorial,Luxembourg,-1.3359606923085443,0,0,0,0,,0,0,0,0,0,2
 Mullerthal,Luxembourg,-1.7687675669275766,1,0,1,0,1.0,0,0,0,0,0,1
 Beaufort Castle,Luxembourg,-1.7687675669275766,1,0,1,0,1.0,0,1,0,0,0,0
 Vianden Castle,Luxembourg,-1.7687675669275766,1,0,1,0,1.0,1,1,0,0,0,0
@@ -201,10 +201,10 @@ Reynisfjara Black Sand Beach,Iceland,-1.3359606923085443,0,0,0,0,2.0,0,0,1,0,0,2
 Belgrade,Serbia,0.3549869829275835,1,0,1,0,1.0,1,0,0,0,1,3
 Novi Sad,Serbia,-0.3310047474747989,1,0,1,0,1.0,1,0,0,0,0,1
 Ni?,Serbia,-0.6499722921053341,1,0,1,0,1.0,1,1,0,0,0,0
-Belgrade Fortress,Serbia,-0.9031506956730588,0,0,0,0,0.0,1,0,0,0,0,2
+Belgrade Fortress,Serbia,-0.9031506956730588,0,0,0,0,,1,0,0,0,0,2
 Tara National Park,Serbia,-1.3359606923085443,0,1,0,0,2.0,0,0,0,0,0,2
 Kopaonik,Serbia,-1.3359606923085443,0,1,0,1,2.0,0,0,0,0,0,2
-Novi Sad Fortress,Serbia,-1.7687675669275766,0,0,0,0,0.0,1,0,0,0,0,2
+Novi Sad Fortress,Serbia,-1.7687675669275766,0,0,0,0,,1,0,0,0,0,2
 Sremski Karlovci,Serbia,-2.2015681976541863,1,0,1,0,1.0,1,0,0,1,0,1
 Subotica,Serbia,-2.340896656506714,1,0,1,0,1.0,0,0,0,1,0,1
 Vrnja?ka Banja,Serbia,-2.7736785566798687,0,0,0,0,2.0,0,0,0,0,0,2

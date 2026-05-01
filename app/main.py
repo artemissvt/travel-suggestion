@@ -1,8 +1,13 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+from pathlib import Path
+import pandas as pd
 
-df = pd.read_csv("../european_tour_destinations.csv", encoding="latin1")
+BASE_DIR = Path(__file__).resolve().parent
+
+csv_path = Path(__file__).parent / "european_tour_destinations.csv"
+df = pd.read_csv(csv_path, encoding="latin1")
 
 # tourists
 def convert_tourists(value):

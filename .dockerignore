@@ -1,0 +1,28 @@
+# Virtual environment — never copy this in
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.mypy_cache/
+.pytest_cache/
+
+# Git
+.git/
+.gitignore
+
+# IDE / OS
+.idea/
+.vscode/
+*.DS_Store
+Thumbs.db
+
+# Local dev / misc
+*.log
+*.env
+.env*
+docker-compose*.yml
+README*
