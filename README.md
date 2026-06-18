@@ -1,6 +1,6 @@
 # AI Travel Destination Recommendation Service
 
-# Overview
+## Overview
 This project is a machine learning-powered recommendation service
 that generates travel destination suggestions based on natural language user preferences.
 Users can describe their ideal trip (e.g. climate, activities, budget, atmosphere, season),
@@ -9,7 +9,7 @@ The service is exposed through a FastAPI REST API and is designed to integrate
 with external applications such as web platforms and mobile applications.
 
 
-# Features
+## Features
 - Natural language travel preference processing
 - Kmeans model for clustering
 - Destination recommendation engine
@@ -19,10 +19,10 @@ with external applications such as web platforms and mobile applications.
 - Cloud deployment ready
 - Integration with external applications
 
-# Architecture
+## Architecture
 Client Application --> FastAPI --> Reccomendation Engine --> Destination Dataset
 
-# Technology Stack
+## Technology Stack
 - Python
 - FastAPI
 - Pandas
@@ -30,6 +30,6 @@ Client Application --> FastAPI --> Reccomendation Engine --> Destination Dataset
 - Scikit-Learn
 - Uvicorn
 
-# Deployment
-Produstion endpoint: https://ml-travel-suggest-2568f.ondigitalocean.app
+## Deployment
+Production endpoint: https://destination-suggester-b9aov.ondigitalocean.app
 Interactive API documentation: https://ml-travel-suggest-2568f.ondigitalocean.app/docs
