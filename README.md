@@ -32,4 +32,5 @@ Client Application --> FastAPI --> Reccomendation Engine --> Destination Dataset
 
 ## Deployment
 Production endpoint: https://destination-suggester-b9aov.ondigitalocean.app
+
 Interactive API documentation: https://ml-travel-suggest-2568f.ondigitalocean.app/docs
